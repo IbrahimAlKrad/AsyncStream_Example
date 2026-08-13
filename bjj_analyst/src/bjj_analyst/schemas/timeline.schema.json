@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BJJAnalystTimeline",
+  "type": "object",
+  "required": ["fps", "segments", "events"],
+  "properties": {
+    "fps": { "type": "number" },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start_s", "end_s", "state"],
+        "properties": {
+          "start_s": { "type": "number" },
+          "end_s": { "type": "number" },
+          "state": { "type": "string" },
+          "bottom": { "type": ["string", "null"] },
+          "top": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["t_s", "type"],
+        "properties": {
+          "t_s": { "type": "number" },
+          "type": { "type": "string" },
+          "by": { "type": ["string", "null"] },
+          "from": { "type": ["string", "null"] },
+          "to": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

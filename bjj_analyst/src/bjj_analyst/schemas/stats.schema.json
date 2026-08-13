@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BJJAnalystStats",
+  "type": "object",
+  "properties": {
+    "athlete_a": { "$ref": "#/$defs/athleteStats" },
+    "athlete_b": { "$ref": "#/$defs/athleteStats" },
+    "time_in_state_s": {
+      "type": "object",
+      "additionalProperties": { "type": "number" }
+    },
+    "events": {
+      "type": "object",
+      "additionalProperties": { "type": "integer" }
+    },
+    "position_improvements": { "type": "array" },
+    "transition_matrix": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": { "type": "integer" }
+      }
+    }
+  },
+  "$defs": {
+    "athleteStats": {
+      "type": "object",
+      "properties": {
+        "time_in_state_s": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "events": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        },
+        "position_improvements": { "type": "array" }
+      }
+    }
+  }
+}

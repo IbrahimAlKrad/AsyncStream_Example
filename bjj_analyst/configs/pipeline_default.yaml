@@ -1,0 +1,13 @@
+fps: 20
+decode:
+  max_long_side: 1280
+pose:
+  backend: rtmpose
+  device: cpu
+tracking:
+  backend: bytetrack
+temporal:
+  checkpoint: null
+feedback:
+  provider: null   # set when LLM API is wired
+  model: null
