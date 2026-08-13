@@ -1,4 +1,11 @@
-# AsyncStream with SwiftUI
+# Workspace
+
+## BJJ Analyst (No-Gi CLI)
+
+Offline match analysis architecture and starter CLI live in [`bjj_analyst/`](./bjj_analyst/).  
+Start with [`bjj_analyst/ARCHITECTURE.md`](./bjj_analyst/ARCHITECTURE.md).
+
+## StreamingEx (SwiftUI)
 
 StreamingEx is a simple SwiftUI demo showcasing the use of Swift's `AsyncStream` to simulate and visualize real-time data updates. The app generates random temperature values and updates the UI continuously until stopped.
 

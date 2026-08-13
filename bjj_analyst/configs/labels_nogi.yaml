@@ -1,0 +1,49 @@
+# No-Gi MVP taxonomy — keep small; expand only with labeled data.
+
+sport: bjj_nogi
+
+states:
+  - standing
+  - open_guard
+  - closed_guard
+  - half_guard
+  - butterfly
+  - side_control
+  - mount
+  - back_control
+  - north_south
+  - turtle
+  - other_ground
+
+events:
+  - none
+  - takedown
+  - pass
+  - sweep
+  - reversal
+  - submission_attempt
+  - submission_finish
+
+# Higher = better control for the athlete who holds the "advantage" side.
+# Used by the state machine to mark position improvements.
+position_rank:
+  back_control: 90
+  mount: 80
+  side_control: 70
+  north_south: 70
+  half_guard: 40          # context-dependent; refine per top/bottom later
+  closed_guard: 35
+  butterfly: 35
+  open_guard: 30
+  turtle: 20
+  standing: 10
+  other_ground: 0
+
+# Anti-flicker: minimum seconds before a state change is accepted.
+min_state_duration_s: 0.8
+
+# Sliding windows for the temporal model.
+window:
+  length_s: 2.0
+  hop_s: 0.5
+  target_fps: 20
